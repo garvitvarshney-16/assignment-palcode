@@ -17,7 +17,7 @@ const Login = () => {
         setLoading(true);
 
         try {
-            await axios.post("http://localhost:3001/send-otp", { email });
+            await axios.post("https://assignment-palcode.onrender.com/send-otp", { email });
             setStep(2);
         } catch (err) {
             setError(err.response?.data || "Error sending OTP. Please try again.");
@@ -32,7 +32,7 @@ const Login = () => {
         setLoading(true);
 
         try {
-            await axios.post("http://localhost:3001/verify-otp", { email, otp });
+            await axios.post("https://assignment-palcode.onrender.com/verify-otp", { email, otp });
             alert("Signup successful!");
             navigate("/app");
         } catch (err) {

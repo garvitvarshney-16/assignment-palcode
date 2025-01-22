@@ -6,7 +6,7 @@ import { Input, Button } from "@material-tailwind/react";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [otp, setOtp] = useState("");
-    const [step, setStep] = useState(1); // 1: Enter Email, 2: Enter OTP
+    const [step, setStep] = useState(1);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
